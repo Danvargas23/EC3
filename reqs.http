@@ -1,0 +1,25 @@
+@server = https://github.com/Danvargas23/EC3.git
+@api = {{server}}/api/ec3
+
+###en el form, en el campo de la URL de render esribe: "REVISAR EN CODESPACES"
+################ Categorias: ################
+###
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos Guitarra"}
+################ Instrumentos: ################
+#NOTA: Cambie /instrumentos a /instrumentoes
+###
+GET {{api}}/instrumentoes
+###
+POST {{api}}/instrumentoes
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/2"}
+###
+GET {{api}}/instrumentoes/2/categoria
+###
+GET {{api}}/instrumentoes?sort=nombre,desc
